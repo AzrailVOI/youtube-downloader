@@ -1,0 +1,23 @@
+{
+  "name": "youtube-downloader-electon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager . \"YouTube Downloader\" --platform=win32 --arch=x64 --out=dist --overwrite --icon=assets/icon.ico"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@distube/ytdl-core": "^4.13.5",
+    "electron": "^31.2.1",
+    "ytdl-core": "^4.11.5"
+  },
+  "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "@types/node": "^20.14.10",
+    "electron-packager": "^17.1.2"
+  }
+}
