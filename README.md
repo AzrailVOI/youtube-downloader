@@ -14,6 +14,10 @@ There are source files.
 - [electron-packager](https://www.npmjs.com/package/electron-packager)
 - [lucide](https://lucide.dev)
 
+## Releases
+
+- [latest](https://github.com/AzrailVOI/youtube-downloader/releases/tag/latest)
+
 ## Installation
 
 ```bash 
