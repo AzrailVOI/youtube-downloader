@@ -26,7 +26,7 @@ bun install
 bun start
 ```
 
-## Make a package
+## Make a package for Windows x64
 
 ```bash
 bun package
