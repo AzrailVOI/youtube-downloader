@@ -30,8 +30,18 @@ bun install
 bun start
 ```
 
-## Make a package for Windows x64
-
+## Make a package (x64)
+- Windows
 ```bash
-bun package
+bun win
+```
+
+- Linux
+```bash
+bun linux
+```
+
+- Darwin (MacOS)
+```bash
+bun darwin
 ```
