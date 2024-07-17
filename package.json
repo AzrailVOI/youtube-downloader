@@ -5,7 +5,9 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "package": "electron-packager . \"YouTube Downloader\" --platform=win32 --arch=x64 --out=dist --overwrite --icon=assets/icon.ico"
+    "win": "electron-packager . \"YouTube Downloader\" --platform=win32 --arch=x64 --out=dist --overwrite --icon=assets/icon.ico",
+    "linux": "electron-packager . \"YouTube Downloader\" --platform=linux --arch=x64 --out=dist --overwrite --icon=assets/icon.png",
+    "darwin": "electron-packager . \"YouTube Downloader\" --platform=darwin --arch=x64 --out=dist --overwrite --icon=assets/icon.icns"
   },
   "keywords": [],
   "author": "",

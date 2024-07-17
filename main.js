@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain, dialog } = require('electron');
+const { app, BrowserWindow, ipcMain, dialog, Menu } = require('electron');
 const path = require('path');
 const ytdl = require('@distube/ytdl-core');
 const fs = require('fs');
@@ -14,7 +14,28 @@ function createWindow() {
   });
 
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
+
+  // Создание контекстного меню
+  const contextMenu = Menu.buildFromTemplate([
+    {
+      label: 'Вырезать',
+      role: 'cut'
+    },
+    {
+      label: 'Копировать',
+      role: 'copy'
+    },
+    {
+      label: 'Вставить',
+      role: 'paste'
+    }
+  ]);
+
+  // Показ контекстного меню при правом клике
+  mainWindow.webContents.on('context-menu', (event, params) => {
+    contextMenu.popup(mainWindow, params.x, params.y);
+  });
 }
 
 app.whenReady().then(createWindow);
