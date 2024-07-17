@@ -65,7 +65,6 @@ ipcMain.handle('download-video', async (event, url) => {
   const stream = ytdl(url, {
     filter: 'videoandaudio',
     format: 'mp4',
-    quality: 'highest',
   }).pipe(fs.createWriteStream(filePath));
 
   return new Promise((resolve, reject) => {
